@@ -1,0 +1,15 @@
+{
+  "name": "sayso",
+  "description": "Sayso: best-price crypto trading for AI agents, non-custodial.",
+  "owner": {
+    "name": "Sayso",
+    "url": "https://sayso.ninja"
+  },
+  "plugins": [
+    {
+      "name": "sayso",
+      "source": "./",
+      "description": "Trade crypto from your AI agent: buy, sell, swap or bridge across Solana, Base, Robinhood Chain and HyperEVM at the best price across every venue, with safety checks. Non-custodial: your wallet signs everything."
+    }
+  ]
+}

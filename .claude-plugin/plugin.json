@@ -1,0 +1,21 @@
+{
+  "name": "sayso",
+  "description": "Trade crypto from your AI agent: buy, sell, swap or bridge across Solana, Base, Robinhood Chain and HyperEVM at the best price across every venue, with safety checks. Non-custodial: your wallet signs everything.",
+  "version": "1.1.0",
+  "author": {
+    "name": "Sayso",
+    "url": "https://sayso.ninja"
+  },
+  "homepage": "https://sayso.ninja",
+  "repository": "https://github.com/itsmemeworks/sayso-agent-skill",
+  "license": "MIT",
+  "keywords": [
+    "crypto",
+    "trading",
+    "solana",
+    "base",
+    "defi",
+    "agent-skills",
+    "non-custodial"
+  ]
+}

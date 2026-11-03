@@ -1,0 +1,22 @@
+name: Validate
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  skill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: CLI runs with no dependencies
+        run: |
+          node --check skills/sayso/scripts/sayso.mjs
+          node skills/sayso/scripts/sayso.mjs | grep -q "Sayso CLI"
+      - name: SKILL.md follows the Agent Skills specification
+        run: node .github/validate-skill.mjs skills/sayso
+      - name: Plugin manifests are valid JSON
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('.claude-plugin/plugin.json'))"
+          node -e "JSON.parse(require('fs').readFileSync('.claude-plugin/marketplace.json'))"
